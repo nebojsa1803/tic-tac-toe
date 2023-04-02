@@ -1,0 +1,160 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #12181b;
+  font-family: 'Roboto', sans-serif;
+}
+/* page with board */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #000;
+  transition: box-shadow 0.5s ease;
+}
+.board:hover {
+  box-shadow: 0 0 5px rgb(124, 172, 244), 0 0 10px rgb(124, 172, 244),
+    0 0 15px rgb(124, 172, 244), 0 0 20px rgb(124, 172, 244);
+}
+.row {
+  height: 100px;
+  width: 300px;
+  display: flex;
+}
+.heading h1 {
+  color: #fbfbfb;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+.row button,
+.row button:disabled {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #dc9a15;
+}
+.reset-btn {
+  display: flex;
+  align-items: center;
+}
+.reset-btn button {
+  width: 100%;
+  height: 50%;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 0;
+  background: #dc4c64;
+  box-shadow: 0 0 10px #e28393;
+  transition: box-shadow 0.5s ease;
+}
+.reset-btn button:hover {
+  box-shadow: 0 0 5px #dc4c64, 0 0 10px #dc4c64, 0 0 15px #dc4c64,
+    0 0 20px #dc4c64;
+}
+.winner {
+  background-color: #4caf50;
+}
+
+/*modal */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(36, 46, 50, 0.7);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 80vw;
+  max-width: 400px;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.modal h4 {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  color: #646cff;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+button {
+  align-items: center;
+  background-color: rgb(124, 172, 244);
+  border: 2px solid #06f;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  height: 100px;
+  width: 100px;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  transition: all 1.5s;
+}
+.modal-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-btn {
+  width: 300px;
+  background-color: rgba(9, 176, 95, 0.9);
+  height: 4rem;
+  border: none;
+  transition: all 0.5s ease;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+.modal-btn:hover {
+  box-shadow: 0 0 5px rgba(9, 176, 95, 0.9), 0 0 10px rgba(9, 176, 95, 0.9),
+    0 0 15px rgba(9, 176, 95, 0.9), 0 0 20px rgba(9, 176, 95, 0.9);
+}
+@media screen and (max-width: 320px) {
+  .board {
+    width: 240px;
+    height: 240px;
+  }
+  .row {
+    height: 80px;
+    width: 240px;
+  }
+  .row button,
+  .row button:disabled {
+    width: 80px;
+    height: 80px;
+  }
+
+  .reset-btn button {
+    width: 100%;
+    height: 50%;
+    font-size: 1.5rem;
+  }
+
+  .modal-btn {
+    width: 240px;
+  }
+}
